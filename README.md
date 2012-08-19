@@ -23,6 +23,11 @@ default
 
 Installs/Configures lldpd
 
+TODO
+====
+
+* CentOS support
+
 License and Author
 ==================
 
