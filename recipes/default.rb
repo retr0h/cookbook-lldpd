@@ -19,4 +19,18 @@
 
 package "lldpd" do
   action :upgrade
+  options node["lldpd"]["platform_options"]
+end
+
+service "lldpd" do
+  action :enable
+end
+
+template "/etc/default/lldpd" do
+   source "lldpd.erb"
+   owner "root"
+   group "root"
+   mode 00644
+   action :create
+   notifies :restart, "service[lldpd]", :immediate
 end
