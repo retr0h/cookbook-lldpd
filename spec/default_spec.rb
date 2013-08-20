@@ -25,7 +25,7 @@ describe "lldpd::default" do
 
     it "has proper interface settings" do
       expect(@chef_run).to create_file_with_content @file.name,
-        'DAEMON_ARGS="-I eth*"'
+        'DAEMON_ARGS="-r -I eth*"'
     end
   end
 end
