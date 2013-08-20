@@ -1,1 +1,10 @@
-cookbook 'lldpd', :path => '/home/jdewey/git/cookbook-lldpd'
+{
+  "sha": "3fd8fcacb64d5356b7dc2762ff8307d5bf25969a",
+  "sources": {
+    "lldpd": {
+      "locked_version": "1.0.0",
+      "constraint": "= 1.0.0",
+      "path": "."
+    }
+  }
+}
