@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/retr0h/cookbook-lldpd.png?branch=master)](https://travis-ci.org/retr0h/cookbook-lldpd)
-[![Dependency Status](https://gemnasium.com/retr0h/cookbook-lldpd.png)](https://gemn    asium.com/retr0h/cookbook-lldpd)
+[![Dependency Status](https://gemnasium.com/retr0h/cookbook-lldpd.png)](https://gemnasium.com/retr0h/cookbook-lldpd)
 
 Description
 ===========
