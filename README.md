@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/retr0h/cookbook-lldpd.png?branch=master)](https://travis-ci.org/retr0h/cookbook-lldpd)
+[![Dependency Status](https://gemnasium.com/retr0h/cookbook-lldpd.png)](https://gemn    asium.com/retr0h/cookbook-lldpd)
 
 Description
 ===========
@@ -34,7 +35,7 @@ This cookbook is using [ChefSpec](https://github.com/acrmp/chefspec) for
 testing. Should run the following before commiting. It will run your tests,
 and check for lint errors.
 
-    % ./run_tests.bash
+    $ rake
 
 License and Author
 ==================
