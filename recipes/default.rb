@@ -1,36 +1,37 @@
+# encoding: UTF-8
 #
 # Cookbook Name:: lldpd
 # Recipe:: default
 #
-# Copyright 2012-2013, John Dewey
+# Copyright 2012-2014, John Dewey
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
+# Licensed under the Apache License, Version 2.0 (the 'License');
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
+# distributed under the License is distributed on an 'AS IS' BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
 
-package "lldpd" do
+package 'lldpd' do
   action :upgrade
-  options node["lldpd"]["platform_options"]
+  options node['lldpd']['platform_options']
 end
 
-service "lldpd" do
+service 'lldpd' do
   action :enable
 end
 
-template "/etc/default/lldpd" do
-   source "lldpd.erb"
-   owner "root"
-   group "root"
-   mode 00644
-   action :create
-   notifies :restart, "service[lldpd]", :immediate
+template '/etc/default/lldpd' do
+  source 'lldpd.erb'
+  owner 'root'
+  group 'root'
+  mode 00644
+  action :create
+  notifies :restart, 'service[lldpd]', :immediate
 end
