@@ -9,7 +9,7 @@ Installs/Configures lldpd
 Requirements
 ============
 
-* Chef 0.8+
+* Chef 11
 
 Attributes
 ==========
