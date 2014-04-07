@@ -18,7 +18,7 @@ describe 'lldpd::default' do
     end
 
     it 'has proper modes' do
-      expect(sprintf('%o', file.mode)).to eq '644'
+      expect(format('%o', file.mode)).to eq '644'
     end
 
     it 'has proper interface settings' do
