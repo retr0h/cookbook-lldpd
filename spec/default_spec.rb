@@ -6,7 +6,7 @@ describe 'lldpd::default' do
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
   it 'installs package' do
-    chef_run.should upgrade_package 'lldpd'
+    expect(chef_run).to upgrade_package 'lldpd'
   end
 
   context 'lldpd default file' do
