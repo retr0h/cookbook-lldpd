@@ -1,7 +1,7 @@
-{
-  "sources": {
-    "lldpd": {
-      "path": "."
-    }
-  }
-}
+DEPENDENCIES
+  lldpd
+    path: .
+    metadata: true
+
+GRAPH
+  lldpd (1.0.1)
