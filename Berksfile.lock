@@ -4,4 +4,4 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  lldpd (1.0.1)
+  lldpd (1.0.2)
