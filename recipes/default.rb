@@ -31,7 +31,7 @@ template '/etc/default/lldpd' do
   source 'lldpd.erb'
   owner 'root'
   group 'root'
-  mode 00644
+  mode 0o644
   action :create
   notifies :restart, 'service[lldpd]', :immediate
 end
