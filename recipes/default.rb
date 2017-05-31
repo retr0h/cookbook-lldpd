@@ -27,6 +27,14 @@ service 'lldpd' do
   action :enable
 end
 
+daemon_args = node['lldpd']['daemon_args'] || begin
+  ifaces = node['lldpd']['interface_listen'] || nil
+  opts = []
+  opts += ['-r'] if node['lldpd']['receive_only']
+  opts += ['-I', ifaces] if ifaces
+  opts.join(' ')
+end
+
 template '/etc/default/lldpd' do
   source 'lldpd.erb'
   owner 'root'
@@ -34,4 +42,7 @@ template '/etc/default/lldpd' do
   mode 0o644
   action :create
   notifies :restart, 'service[lldpd]', :immediate
+  variables(
+    daemon_args: daemon_args
+  )
 end

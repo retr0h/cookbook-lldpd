@@ -21,3 +21,4 @@
 default['lldpd']['platform_options'] = "-o Dpkg::Options::='--force-confold' -o Dpkg::Options::='--force-confdef'" # rubocop:disable LineLength
 default['lldpd']['interface_listen'] = 'eth*'
 default['lldpd']['receive_only'] = true
+default['lldpd']['daemon_args'] = nil
